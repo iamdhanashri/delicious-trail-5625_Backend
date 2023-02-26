@@ -10,6 +10,9 @@ const app = express()
 
 app.use(express.json())
 app.use(cors())
+app.get("/",(res,req)=>{
+    res.send("Welcome")
+})
 
 
 app.use("/users", userRouter)
